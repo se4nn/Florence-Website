@@ -582,6 +582,7 @@ section.bio {
   justify-content: flex-end;
   display: flex;
   order: 1;
+  margin-left: -50px;
 }
 
 .instagram article:nth-child(3) {

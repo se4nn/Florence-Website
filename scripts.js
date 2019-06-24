@@ -1,5 +1,5 @@
 instafetch.init({
-  accessToken: '2050036497.1677ed0.fbbe8a0cdb8c4343a3220fce3e3fd172',
+  accessToken: '7434904024.1677ed0.de0ed5c92b2e4a879bb2adb3c2d9a848',
   target: 'instagram_feed',
   numOfPics: 4,
   caption: false
