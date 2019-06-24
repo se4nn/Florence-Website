@@ -298,6 +298,14 @@ section.middle {
   margin-left: 50px;
 }
 
+.about_section {
+  flex-wrap: nowrap;
+}
+
+.about_section .quote {
+  margin-left: 40px;
+}
+
 .about_section .quote h2{
   max-width: 545px;
 }
@@ -925,6 +933,7 @@ section.bio {
 
   .left p, .left ul, .right p, .right ul {
     margin-left: 20px;
+    max-width: 100%;
   }
 
   .worker_to_client img:nth-child(1){
@@ -1038,6 +1047,42 @@ section.bio {
 
   .three_points {
     justify-content: center;
+  }
+
+  .about_job {
+    margin-left: 25px;
+  }
+
+  .bio_2, .teams, .about_section {
+    margin-top: 0;
+  }
+
+  .bio .right, .bio .left {
+    margin: 0;
+  }
+
+  .bio img {
+    margin-bottom: 20px;
+  }
+
+  .team {
+    max-width: 100%;
+    margin: 20px 0;
+  }
+
+  .team_hiring {
+    max-width: calc(100% - 40px);
+    margin: 20px 0 !important;
+  }
+
+  .hero_about {
+    padding-top: 200px;
+    background: url(./img/about_hero.png) #EFFBF6 top center/200px 200px no-repeat;
+    margin-bottom: 0;
+  }
+
+  .about_section {
+    flex-wrap: wrap;
   }
 
 }
