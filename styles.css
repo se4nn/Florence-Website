@@ -298,7 +298,7 @@ section.middle {
   margin-left: 50px;
 }
 
-.about_section {
+.about_section, .values {
   flex-wrap: nowrap;
 }
 
@@ -333,22 +333,8 @@ section.middle {
   max-width: 500px;
 }
 
-.values .title {
-  position: relative;
-  margin-bottom: 100px;
-  margin-top: 20px;
-}
-
 .values .title h2 {
   color: #EE6895;
-}
-
-.values .title img {
-  width: 560px;
-  height: 200px;
-  position: absolute;
-  margin-left: -90px;
-  margin-top: -140px;
 }
 
 .quote h2 {
@@ -449,7 +435,7 @@ footer li.title{
 }
 
 .job_divider {
-  height: 100px;
+  min-height: 100px;
   width: 100vw;
   background: url(./img/lines_purple_square.png);
   background-size: auto 100px;
@@ -465,9 +451,10 @@ footer li.title{
   width: 100%;
   padding: 0 125px;
   max-width: 900px;
-  height: 100px;
+  min-height: 100px;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .job_divider_content .buttons {
@@ -591,17 +578,29 @@ section.bio {
 }
 
 .instagram .feed article {
-  flex: 0 calc(50% - 75px);
+  flex: 1 calc(50% - 75px);
+}
+
+.instagram article:nth-child(2) figure, .instagram article:nth-child(5) figure {
+  max-width: 500px;
+  max-height: 500px;
+  overflow: hidden;
+}
+
+.instagram article:nth-child(3) figure, .instagram article:nth-child(4) figure{
+  max-width: 250px;
+  max-height: 250px;
+  overflow: hidden;
 }
 
 .instagram article:nth-child(2) img, .instagram article:nth-child(5) img {
-  width: 500px;
-  height: 500px;
+  width: 100%;
+  height: auto;
 }
 
 .instagram article:nth-child(3) img, .instagram article:nth-child(4) img {
-  width: 250px;
-  height: 250px;
+  width: 100%;
+  height: auto;
 }
 
 .instagram article:nth-child(2) {
@@ -633,9 +632,11 @@ section.bio {
 
 .instagram_logo {
   order: 3;
-  flex: auto !important;
-  position: absolute;
-  align-self: center;
+  flex: 0 0 100% !important;
+  justify-content: center;
+  margin-top: -75px;
+  display: flex;
+  height: 50px;
 }
 
 .instagram_logo img {
@@ -931,7 +932,7 @@ section.bio {
     margin-bottom: 20px;
   }
 
-  .left p, .left ul, .right p, .right ul {
+  .left p, .left ul, .right p, .right ul, .team {
     margin-left: 20px;
     max-width: 100%;
   }
@@ -979,7 +980,7 @@ section.bio {
     width: calc(100% - 4px);
   }
 
-  .point {
+  .point, .values .buttons {
     width: 100%;
     max-width: none;
   }
@@ -1065,9 +1066,8 @@ section.bio {
     margin-bottom: 20px;
   }
 
-  .team {
+  .about_section .right p, .about_section .right .buttons {
     max-width: 100%;
-    margin: 20px 0;
   }
 
   .team_hiring {
@@ -1081,8 +1081,42 @@ section.bio {
     margin-bottom: 0;
   }
 
-  .about_section {
+  .about_section, .values {
     flex-wrap: wrap;
+  }
+
+  .hero_careers{
+    padding-top: 200px;
+    background: url(./img/careers_hero.png) #FCEDF2 top center/200px 200px no-repeat;
+  }
+
+  .hero.hero_careers .buttons .button {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .about_section .left {
+    margin-top: 0;
+  }
+
+  .values .right p, .values .buttons {
+    margin-left: 20px;
+  }
+
+  .job_divider_content {
+    justify-content: center;
+    background: #f5f2fd;
+    padding: 50px 0;
+  }
+
+  .job_divider_content .button {
+    margin: 0 auto;
+    width: auto;
+  }
+
+  .instagram .feed article {
+    flex: 1 0 auto;
+    margin: 20px 0 !important;
   }
 
 }
